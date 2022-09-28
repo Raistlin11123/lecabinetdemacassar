@@ -47,13 +47,13 @@
 </head>
 <body>
 
-    <header id="masthead" class="site-header">
+    <header id="masthead" class="site-header site-header-white">
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
 
                 <div class="navbar-header">
                    
-                    <a class="site-title"><span>Agency</span>Perfect</a>
+                    <a class="site-title"><span>Cab</span>Mac</a>
 
                 </div><!-- /.navbar-header -->
 
@@ -86,9 +86,9 @@
     <div id="hero" class="hero overlay">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Your story begins from here.</h1>
-                <p>Your clients on the internet. Learn how to receive them.</p>
-                <a href="#" class="btn btn-border">Learn more</a>
+                <h1>Le cabinet de Macassar</h1>
+                <p>Restauration de meubles, marqueterie, sculpture sur bois et ébenisterie</p>
+                <!-- <a href="#" class="btn btn-border">Learn more</a>-->
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
     </div><!-- /.hero -->
@@ -99,11 +99,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5">
-                        <h2>Responsive web design</h2>
-                        <p>Responsive Web design is the approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation. The practice consists of a mix of flexible grids and layouts, images and an intelligent use of CSS media queries</p>
+                        <h2>A propos de moi</h2>
+                        <p>
+                            Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta transferri conterminis, sed consularem Syriae Theophilum prope adstantem ultima metuenti multitudini dedit id adsidue replicando quod invito rectore nullus egere poterit victu.
+                            </p>
                     </div>
                     <div class="col-sm-7 hidden-xs">
-                        <img src="assets/img/ipad-pro.png" alt="">
+                        <img src="{% static 'img/photo-profil.jpg' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -111,69 +113,42 @@
 
         <section class="site-section section-services gray-bg text-center">
             <div class="container">
-                <h2 class="heading-separator">Our Services</h2>
-                <p class="subheading-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <h2 class="heading-separator">Mes compétences</h2>
+                <p class="subheading-text">Forte de 8 années d'étude et d'une expérience qui n'est plus à démontrer, je possède de nombreuses compétences qui s'avèrent particulièrement utiles dans la rénovation et la création des meubles.</p>
                 <div class="row">
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/anchor.svg" alt="">
-                            <h3 class="service-title">Branding</h3>
-                            <p class="service-info"> Learn why your brand is a valuable component when it comes to your marketing communication and why you don't want to be without one.</p>
-                        </div><!-- /.service -->
+                            <img src="{% static 'img/logo-eb.svg' %}" alt="">
+                            <h3 class="service-title">Ebénisterie</h3>
+                            <p class="service-info">C'est sur un socle solide que l'on peut ensuite ajouter de nouvelles compétences. Connaissant chaque style et ses spécificités, je peux ainsi utiliser les techniques adéquates pour la restauration de vos meubles</p>
+                        </div>
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/bycicle.svg" alt="">
-                            <h3 class="service-title">Design</h3>
-                            <p class="service-info">The strength of a design lies as much in the steps taken to create it as in the final result. </p>
-                        </div><!-- /.service -->
+                            <img src="{% static 'img/logo-sc.svg' %}"  alt="">
+                            <h3 class="service-title">Sculpture sur bois</h3>
+                            <p class="service-info">Pour agrémenter mes meubles, mais aussi pour créer des objets tout à fait singulier qui viennent accompagner les meubles de vos pièces les plus chères.</p>
+                        </div>
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/paper-plane.svg" alt="">
-                            <h3 class="service-title">Development</h3>
-                            <p class="service-info">Development is a way to make people aware of the services and/or products you are offering.</p>
-                        </div><!-- /.service -->
+                            <img src="{% static 'img/logo-ma.svg' %}" alt="">
+                            <h3 class="service-title">Marqueterie</h3>
+                            <p class="service-info">Quel secrétaire Louis XVI ne possède pas une marqueterie splendide en son centre. Comment le restaurer sans cette compétance?</p>
+                        </div>
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/photo.svg" alt="">
-                            <h3 class="service-title">Photography</h3>
-                            <p class="service-info">Photographs are the legacy you leave for generations to come.</p>
-                        </div><!-- /.service -->
+                            <img src="{% static 'img/logo-re.svg' %}"  alt="">
+                            <h3 class="service-title">Rénovation</h3>
+                            <p class="service-info">Une spécialisation encore plus poussé dans le domaine précis de la restauration de meuble et de la chimie  me permet de vous assurer que chaque meuble que vous me déposez sera restauré avec les matériaux, colles et techniques d'antant.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-xs-6">
-                        <div class="service">
-                            <img src="assets/img/microphone.svg" alt="">
-                            <h3 class="service-title">Support</h3>
-                            <p class="service-info">A support network can include a variety of forms of interaction with a range of people who can support you in different ways. </p>
-                        </div><!-- /.service -->
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                        <div class="service">
-                            <img src="assets/img/rocket.svg" alt="">
-                            <h3 class="service-title">Marketing</h3>
-                            <p class="service-info">Marketing is of vital importance to any business. It is the key process of researching, promoting and selling products or services to your target.</p>
-                        </div><!-- /.service -->
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                        <div class="service">
-                            <img src="assets/img/basket.svg" alt="">
-                            <h3 class="service-title">Ecommerce</h3>
-                            <p class="service-info">When customers are deciding on a purchase, they start by looking online.</p>
-                        </div><!-- /.service -->
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                        <div class="service">
-                            <img src="assets/img/chemestry.svg" alt="">
-                            <h3 class="service-title">Coding</h3>
-                            <p class="service-info">We use the best coding practices</p>
-                        </div><!-- /.service -->
-                    </div>
+
                 </div>
             </div>
-        </section><!-- /.section-services -->
-
+        </section>  
+        <!--
         <section class="site-section section-map-feature text-center">
 
             <div class="container">
@@ -185,107 +160,63 @@
                         <div class="counter-item">
                             <p class="counter" data-to="377" data-speed="2000">0</p>
                             <h3>Cofee Cups</h3>
-                        </div><!-- /.counter-item -->
+                        </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="counter-item">
                             <p class="counter" data-to="1204" data-speed="2000">0</p>       
                             <h3>Projects completed</h3>
-                        </div> <!-- /.counter-item -->      
+                        </div>      
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="counter-item">
                             <p class="counter" data-to="459" data-speed="1000">0</p>
                             <h3>Happy Clients</h3>
-                        </div><!-- /.counter-item -->
+                        </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="counter-item">
                             <p class="counter" data-to="675" data-speed="1000">0</p>
                             <h3>Average Deal</h3>
-                        </div><!-- /.counter-item -->
+                        </div>
                     </div>
                 </div>
             </div>
             
-        </section><!-- /.section-map-feature -->
-
+        </section>-->
+        
         <section class="site-section section-portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="heading-separator">Latest Work</h2>
-                    <p class="subheading-text">This is some of our best work</p>
+                    <h2 class="heading-separator">Mes derniers travaux</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 col-xs-6">
+                {% for furniture in furnitures %}                            
+
+                    <div class="col-lg-3 col-md-4 col-xs-6" data-groups='["{{furniture.caracteristic}}"]'>
                         <div class="portfolio-item">
-                            <img src="assets/img/portfolio-1.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <img src="{{ furniture.image.url}}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">{{ furniture.title }}</h4>
+                            <a href="{% url 'portfolio_item' furniture.id %}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div><!-- /.portfolio-item -->
                     </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-2.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-3.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-4.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-5.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-6.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-1.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/portfolio-2.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">Portfolio item</h4>
-                            <a href="portfolio-item.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div><!-- /.portfolio-item -->
-                    </div>
+
+                
+                {% endfor %}
                 </div>
             </div>
         </section><!-- /.section-portfolio -->
 
+        <!--
         <section class="site-section section-newsletter text-center">
             <div class="container">
                 <h2>Subscribe our newsletters</h2>
                 <form class="form-group newsletter-group">
                     <input type="email" class="form-control" placeholder="Your e-mail" required>
                     <button class="btn btn-green" type="button">Subscribe</button>
-                </form><!-- /.newsletter-group -->
+                </form>
             </div>
-        </section><!-- /.section-newsletter -->
+        </section> -->
 
     </main><!-- /#main -->
 

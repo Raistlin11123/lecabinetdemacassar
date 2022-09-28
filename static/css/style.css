@@ -47,7 +47,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #6fc754;
+    color: #ffebd5c3;
     outline: 0 none;
     text-decoration: none;
 }
@@ -109,7 +109,7 @@ p + p {
 }
 
 .btn-green {
-    background-color: #6fc754;
+    background-color: #ffebd5c3;
     color: #fff;  
 }
 
@@ -123,7 +123,7 @@ button.btn:focus {
 
 .btn-gray:hover,
 .btn-gray:focus {
-    background-color: #6fc754;
+    background-color: #ffebd5c3;
     color: #fff;    
 }
 
@@ -232,7 +232,7 @@ input[type=radio] {
     width: 20px;
     border-radius: 3px;
     color: #fff;
-    background-color: #6fc754;
+    background-color: #ffebd5c3;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -269,12 +269,12 @@ input[type=radio] {
 
 .checkbox [type="checkbox"]:checked:focus + label:before,
 .checkbox [type="checkbox"]:not(:checked):focus + label:before {
-    border: 1px dotted #6fc754;
+    border: 1px dotted #ffebd5c3;
 }
 
 .checkbox [type="checkbox"]:not(:checked) + label:hover:before,
 .checkbox [type="checkbox"]:checked + label:hover:before {
-    border: 1px solid #6fc754;
+    border: 1px solid #ffebd5c3;
 }
 
 /* Radiobutton fields */
@@ -322,7 +322,7 @@ input[type=radio] {
     height: 12px;
     top: 50%;
     left: 4px;
-    background-color: #6fc754;
+    background-color: #ffebd5c3;
     border-radius: 50px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -360,12 +360,12 @@ input[type=radio] {
 
 .radio-btn [type="radio"]:checked:focus + label:before,
 .radio-btn [type="radio"]:not(:checked):focus + label:before {
-    border: 1px dotted #6fc754;
+    border: 1px dotted #ffebd5c3;
 }
 
 .radio-btn [type="radio"]:checked + label:hover:before,
 .radio-btn [type="radio"]:not(:checked) + label:hover:before {
-    border: 1px solid #6fc754;
+    border: 1px solid #ffebd5c3;
 }
 
 /* Selectpicker */
@@ -437,7 +437,7 @@ select {
 }
 
 .bootstrap-select .selected {
-    color: #6fc754;
+    color: #ffebd5c3;
 }
 
 .bootstrap-select .check-mark {
@@ -459,8 +459,8 @@ select {
 
 .nav-tabs.tab-style > li.active > a,
 .nav-tabs.tab-style > li > a:hover {
-    border: 1px solid #6fc754;
-    background-color: #6fc754;
+    border: 1px solid #ffebd5c3;
+    background-color: #ffebd5c3;
     color: #fff;
 }
 
@@ -535,7 +535,7 @@ select {
 .accordion .panel-heading a.collapsed:hover,
 .accordion.accordion-gray .panel-heading a.collapsed:hover,
 .accordion .panel-heading a {
-    background-color: #6fc754;   
+    background-color: #ffebd5c3;   
     color: #fff; 
 }
 
@@ -583,7 +583,7 @@ select {
 .pagination > li.active > a,
 .pagination > li > a:hover,
 .pagination > li.active > a:hover {
-  background-color: #6fc754;
+  background-color: #ffebd5c3;
   color: #fff;
 }
 
@@ -716,7 +716,7 @@ html, body {
 .slicknav_open .slicknav_arrow,
 .slicknav_nav > li a:hover {
     background-color: transparent;
-    color: #6fc754;
+    color: #ffebd5c3;
 }
 
 .navbar-toggle {
@@ -749,7 +749,7 @@ html, body {
     border-radius: 0;
     min-width: 130px;
     border: 0;
-    border-top: 5px solid #6fc754;
+    border-top: 5px solid #ffebd5c3;
     top: 140%;
     transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -788,7 +788,7 @@ html, body {
 
 .overlay:before {
   content: '';
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.05);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -814,13 +814,14 @@ html, body {
 .hero-text h1 {
     position: relative;
     margin: 0;
+    color: #fff
 }
 
 .hero-text p {
     position: relative;
     margin: 45px 0 30px;
     font-size: 20px;
-    color: #26272d;
+    color: #fff;
 }
 
 .hero-text .btn {
@@ -870,7 +871,7 @@ html, body {
 }
 
 .subpage-hero a:hover {
-    color: #6fc754;
+    color: #ffebd5c3;
 }
 
 .portfolio-hero {
@@ -1139,7 +1140,7 @@ html, body {
 
 .list-unstyled li a:hover,
 .list-unstyled li.active a {
-    color: #6fc754;
+    color: #ffebd5c3;
 }
 
 /* Copyright */
@@ -1245,7 +1246,7 @@ a.linkedin-bg:hover {
 }
 
 .portfolio-sorting li .active {
-    background-color: #6fc754;
+    background-color: #ffebd5c3;
     color: #fff;  
     box-shadow: none;   
 }
@@ -1375,12 +1376,12 @@ a.linkedin-bg:hover {
 }
 
 .post-content .read-more:hover:after {
-    background-color: #6fc754; 
+    background-color: #ffebd5c3; 
 }
 
 .blog-post a:hover + .post-content .post-title a,
 .post-content a:hover {
-    color: #6fc754;
+    color: #ffebd5c3;
 }
 
 .post-meta {

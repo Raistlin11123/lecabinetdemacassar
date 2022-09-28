@@ -13,17 +13,6 @@ from .models import Furniture
 from .forms import ContactForm
 
 
-send_mail(
-    'Subject here',
-    'Here is the message.',
-    'from@example.com',
-    ['to@example.com'],
-    fail_silently=False,
-)
-
-
-
-
 def portfolio_creation_view(request):
     furnitures = Furniture.objects.filter(category = "creation")
     return render(request, 'portfolio_creation.html', {'furnitures':furnitures})
@@ -43,15 +32,27 @@ def contact_view(request):
             #(On peut ajouter des conditions pour vérifier que le message est bien)
             send_mail(
                 form.cleaned_data["subject"],
-                form.cleaned_data["content"],
-                form.cleaned_data["email"],
+                form.cleaned_data["content"]  + "\n" + "\n" + form.cleaned_data["email"],#on saute une ligne entre l'email et le message
+                "",#ici c'est l'email de celui qui donne mais c'est toujours moi cf settings (logique on peut pas envoyer de qq d'autre sans son mdp)
                 ['philippepavec@gmail.com'],
                 fail_silently=False,
             )
             return redirect('index')#avec un message de succès
-            
+        form = ContactForm()#remise à blanc
 
     else:
         form = ContactForm()
 
     return render(request, 'contact.html', {'form': form} )
+
+def portfolio_item_view(request, id_furniture):
+    try:
+        furniture = Furniture.objects.get(id=id_furniture)
+    except furniture.DoesNotExist:
+        raise Http404
+    try:
+        related_furnitures = Furniture.objects.filter(category = furniture.category, caracteristic = furniture.caracteristic)
+    except furniture.DoesNotExist:
+        raise Http404
+
+    return render(request,'portfolio_item.html',{'furniture':furniture,  "related_furnitures":related_furnitures}, )
