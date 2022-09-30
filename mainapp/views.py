@@ -1,4 +1,5 @@
 #django
+import re
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -7,7 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.mail import send_mail
 
-from mainapp.models import Furniture
+from mainapp.models import Furniture, FurnitureImage
 #app
 from .models import Furniture
 from .forms import ContactForm
@@ -48,11 +49,24 @@ def contact_view(request):
 def portfolio_item_view(request, id_furniture):
     try:
         furniture = Furniture.objects.get(id=id_furniture)
-    except furniture.DoesNotExist:
-        raise Http404
-    try:
-        related_furnitures = Furniture.objects.filter(category = furniture.category, caracteristic = furniture.caracteristic)
+        photos = FurnitureImage.objects.filter(furniture=furniture)
     except furniture.DoesNotExist:
         raise Http404
 
-    return render(request,'portfolio_item.html',{'furniture':furniture,  "related_furnitures":related_furnitures}, )
+    #on ne met pas en meuble relié le meuble lui même d'où le if
+    related_furnitures_ = Furniture.objects.filter(category = furniture.category, caracteristic = furniture.caracteristic)
+    related_furnitures = []
+    for el in related_furnitures_:
+        if el != furniture:
+            related_furnitures.append(el)
+
+
+    #pour mettre une lettre sur 4 ou 5 jaune
+    titre = []
+    for i in range(len(furniture.title)):
+        if i%5==1:
+            titre.append((furniture.title[i].upper(), 'yellow'))
+        else:
+            titre.append((furniture.title[i].upper(), 'white'))
+
+    return render(request,'portfolio_item.html',{'titre':titre,'furniture':furniture,  "related_furnitures":related_furnitures, "photos":photos})

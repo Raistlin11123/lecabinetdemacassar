@@ -47,7 +47,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #ffebd5c3;
+    color: rgb(255, 208, 0);
     outline: 0 none;
     text-decoration: none;
 }
@@ -84,8 +84,8 @@ p + p {
     font-weight: 300;
     border: 0;
     border-radius: 50px;
-    color: #26272d;
-    background-color: #fff;
+    color: #2c2d26;
+    background-color: rgb(255, 255, 255);
     padding: 0;
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
     -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
@@ -95,7 +95,7 @@ p + p {
 }
 
 .btn-border {
-    border: 1px solid #26272d;
+    border: 2px solid #ffffff;
 }
 
 .btn-fill {
@@ -109,7 +109,7 @@ p + p {
 }
 
 .btn-green {
-    background-color: #ffebd5c3;
+    background-color: rgb(255, 132, 0);
     color: #fff;  
 }
 
@@ -117,13 +117,13 @@ p + p {
 button.btn:hover,
 .btn:focus,
 button.btn:focus {
-    background-color: #26272d;
+    background-color: rgb(255,208,0);
     color: #fff;
 }
 
 .btn-gray:hover,
 .btn-gray:focus {
-    background-color: #ffebd5c3;
+    background-color: rgb(255, 208, 0);
     color: #fff;    
 }
 
@@ -232,7 +232,7 @@ input[type=radio] {
     width: 20px;
     border-radius: 3px;
     color: #fff;
-    background-color: #ffebd5c3;
+    background-color: rgb(255, 208, 0);
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -269,12 +269,12 @@ input[type=radio] {
 
 .checkbox [type="checkbox"]:checked:focus + label:before,
 .checkbox [type="checkbox"]:not(:checked):focus + label:before {
-    border: 1px dotted #ffebd5c3;
+    border: 1px dotted rgb(255, 208, 0);
 }
 
 .checkbox [type="checkbox"]:not(:checked) + label:hover:before,
 .checkbox [type="checkbox"]:checked + label:hover:before {
-    border: 1px solid #ffebd5c3;
+    border: 1px solid rgb(255, 208, 0);
 }
 
 /* Radiobutton fields */
@@ -322,7 +322,7 @@ input[type=radio] {
     height: 12px;
     top: 50%;
     left: 4px;
-    background-color: #ffebd5c3;
+    background-color: rgb(255, 208, 0);
     border-radius: 50px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -360,12 +360,12 @@ input[type=radio] {
 
 .radio-btn [type="radio"]:checked:focus + label:before,
 .radio-btn [type="radio"]:not(:checked):focus + label:before {
-    border: 1px dotted #ffebd5c3;
+    border: 1px dotted rgb(255, 208, 0);
 }
 
 .radio-btn [type="radio"]:checked + label:hover:before,
 .radio-btn [type="radio"]:not(:checked) + label:hover:before {
-    border: 1px solid #ffebd5c3;
+    border: 1px solid rgb(255, 208, 0);
 }
 
 /* Selectpicker */
@@ -391,7 +391,7 @@ select {
 }
 
 .bootstrap-select.btn-group .dropdown-menu.inner {
-    position: static; *
+    position: static; 
     float: none;
     border: 0;
     padding: 0;
@@ -437,7 +437,7 @@ select {
 }
 
 .bootstrap-select .selected {
-    color: #ffebd5c3;
+    color: rgb(255, 208, 0);
 }
 
 .bootstrap-select .check-mark {
@@ -459,8 +459,8 @@ select {
 
 .nav-tabs.tab-style > li.active > a,
 .nav-tabs.tab-style > li > a:hover {
-    border: 1px solid #ffebd5c3;
-    background-color: #ffebd5c3;
+    border: 1px solid rgb(255, 208, 0);
+    background-color: rgb(255, 208, 0);
     color: #fff;
 }
 
@@ -535,7 +535,7 @@ select {
 .accordion .panel-heading a.collapsed:hover,
 .accordion.accordion-gray .panel-heading a.collapsed:hover,
 .accordion .panel-heading a {
-    background-color: #ffebd5c3;   
+    background-color: rgb(255, 208, 0);   
     color: #fff; 
 }
 
@@ -583,7 +583,7 @@ select {
 .pagination > li.active > a,
 .pagination > li > a:hover,
 .pagination > li.active > a:hover {
-  background-color: #ffebd5c3;
+  background-color: rgb(255, 208, 0);
   color: #fff;
 }
 
@@ -716,7 +716,7 @@ html, body {
 .slicknav_open .slicknav_arrow,
 .slicknav_nav > li a:hover {
     background-color: transparent;
-    color: #ffebd5c3;
+    color: rgb(255, 208, 0);
 }
 
 .navbar-toggle {
@@ -749,7 +749,7 @@ html, body {
     border-radius: 0;
     min-width: 130px;
     border: 0;
-    border-top: 5px solid #ffebd5c3;
+    border-top: 5px solid rgb(255, 208, 0);
     top: 140%;
     transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -788,7 +788,7 @@ html, body {
 
 .overlay:before {
   content: '';
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(38,39,45,0.32);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -804,7 +804,7 @@ html, body {
 }
 
 .hero-text {
-    max-width: 890px;
+    max-width: 1300;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -814,9 +814,17 @@ html, body {
 .hero-text h1 {
     position: relative;
     margin: 0;
-    color: #fff
+    color: #fff;
+    font-weight: bold;
 }
 
+#yellow-letter {
+    color:rgb(255, 208, 0)
+}
+
+.white {
+    color:white;
+}
 .hero-text p {
     position: relative;
     margin: 45px 0 30px;
@@ -830,7 +838,7 @@ html, body {
 }
 
 .hero-text .btn:hover {
-    background-color: #26272d;
+    background-color: rgb(255,208,0);
     color: #fff;
 }
 
@@ -871,7 +879,7 @@ html, body {
 }
 
 .subpage-hero a:hover {
-    color: #ffebd5c3;
+    color: rgb(255, 208, 0);
 }
 
 .portfolio-hero {
@@ -1097,7 +1105,7 @@ html, body {
 }
 
 .site-footer > .container {
-    padding-bottom: 170px;
+    padding-bottom: 50px;
 }
 
 .site-footer .list-unstyled li + li {
@@ -1140,7 +1148,7 @@ html, body {
 
 .list-unstyled li a:hover,
 .list-unstyled li.active a {
-    color: #ffebd5c3;
+    color: rgb(255, 208, 0);
 }
 
 /* Copyright */
@@ -1246,7 +1254,7 @@ a.linkedin-bg:hover {
 }
 
 .portfolio-sorting li .active {
-    background-color: #ffebd5c3;
+    background-color: rgb(255, 208, 0);
     color: #fff;  
     box-shadow: none;   
 }
@@ -1376,12 +1384,12 @@ a.linkedin-bg:hover {
 }
 
 .post-content .read-more:hover:after {
-    background-color: #ffebd5c3; 
+    background-color: rgb(255, 208, 0); 
 }
 
 .blog-post a:hover + .post-content .post-title a,
 .post-content a:hover {
-    color: #ffebd5c3;
+    color: rgb(255, 208, 0);
 }
 
 .post-meta {
