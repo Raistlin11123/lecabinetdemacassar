@@ -17,7 +17,7 @@ class Contact(models.Model):
 """
 
 class Furniture(models.Model):
-	title = models.CharField(max_length=255, verbose_name='titre')
+	title = models.CharField(max_length=35, verbose_name='titre (30 caractère max')
 	image =  models.ImageField(null=True, blank=True, verbose_name='image_liste (plutot carré)')
 	description = models.TextField(verbose_name = 'description', null=True, blank=True)
 	date = models.DateTimeField(default=now, blank=True)
