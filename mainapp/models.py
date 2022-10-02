@@ -20,7 +20,7 @@ class Furniture(models.Model):
 	title = models.CharField(max_length=35, verbose_name='titre (30 caractère max')
 	image =  models.ImageField(null=True, blank=True, verbose_name='image_liste (plutot carré)')
 	description = models.TextField(verbose_name = 'description', null=True, blank=True)
-	date = models.DateTimeField(default=now, blank=True)
+	date = models.DateTimeField(blank=True)
 	keywords = models.CharField(null=True, max_length=255, verbose_name='mots clé à afficher en plus de catgorie et caractérisitique', blank=True)
 	for_sale = models.BooleanField()
 	category = models.CharField(max_length=42, verbose_name='catégorie : creation/restauration') #faire un form avec une liste déroulante avec restauration/création
