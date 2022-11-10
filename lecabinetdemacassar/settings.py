@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
+from django.test.utils import ignore_warnings
 
+ignore_warnings(message="No directory at", module="whitenoise.base").enable()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^d#@$a*to&&olc$_n3ta71p&1$^ejo52cxm(+e)yvnj^njnhf*'
+SECRET_KEY = '3d7bc24cbcba5262a9f755215cb1778ae9a6d89c85924af6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
