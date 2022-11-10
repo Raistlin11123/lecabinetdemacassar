@@ -642,8 +642,16 @@ html, body {
 ================================================== */
 .site-header {
     position: absolute;
-    padding: 50px 0 0;
-    background-color: transparent;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    z-index: 3;
+}
+
+.site-header-index {
+    position: absolute;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     z-index: 3;
 }
