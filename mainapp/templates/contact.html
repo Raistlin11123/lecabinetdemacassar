@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id="hero" class="hero overlay subpage-hero contact-hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>CO<span id='yellow-letter'>N</span>TACT</h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Acceuil</a></li>
+              <li class="breadcrumb-item active">Contact</li>
+            </ol>
+        </div><!-- /.hero-text -->
+    </div><!-- /.hero-content -->
+</div><!-- /.hero -->
+
+<main id="main" class="site-main">
+
+    <section class="site-section subpage-site-section section-contact-us">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h2>Envoyer un message</h2>
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="name">Nom:</label>
+                                  {{form.name}}
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="email">E-mail:</label>
+                                  {{form.email}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="message">Sujet:</label>
+                          {{form.subject}}
+                        </div>
+                        <div class="form-group">
+                          <label for="message">Message:</label>
+                          {{form.content}}
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-gray">Me contacter</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-5">
+                    <div class="contact-info">
+                        <h2>Mes informations</h2>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Addresse de l'atelier</h3>
+                                <ul class="list-unstyled">
+                                    <li>Le Mans, France</li>
+                                    <li>53 rue de la Fuie</li>
+                                </ul>
+                                <h3>E-mail</h3>
+                                <a href="mailto:clemencepavec@gmail.com" target="_blank">clemencepavec@gmail.com</a>
+                                <h3>Téléphone</h3>
+                                <a href="tel:0645597625" target="_blank">06 45 59 76 25</a>
+                            </div>
+                        </div>
+                    </div><!-- /.contact-info -->
+                </div>
+            </div>
+        </div>
+        
+    </section><!-- /.section-contact-us -->
+
+
+</main><!-- /#main -->
+
+{% endblock %}

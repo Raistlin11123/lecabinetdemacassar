@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div id="hero" class="hero overlay subpage-hero portfolio-hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>
+            <!--petit code particulier qui permet de mettre environ une lettre sur 4 ou 5 jaune-->
+            {% for letter, color in titre %}
+            {%if letter == " "%}&nbsp{%elif color == 'yellow' %}<span id='yellow-letter' style="margin: -0.15em">{{letter}}</span>{%else%}<span style="margin: -0.15em">{{letter}}</span>{%endif%}
+            {%endfor%}
+            </h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Acceuil</a></li>
+              <li class="breadcrumb-item"><a href="portfolio.html">Portfolio</a></li>
+              <li class="breadcrumb-item active">{{ furniture.title }}</li>
+            </ol>
+        </div><!-- /.hero-text -->
+    </div><!-- /.hero-content -->
+</div><!-- /.hero -->
+
+<main id="main" class="site-main">
+
+    <section class="site-section subpage-site-section section-project">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {%for photo in photos %}
+                    <div class="project-img">
+                        <img src="{{ photo.images.url}}" class="img-res" alt="">
+                    </div>
+                    {%endfor%}
+                    <!-- /.project-img 
+                        ++de plus il va falloir voir comment gérer la taille de ces images puisque ici on a un carré pour la présentation puis des rectangles après
+                        Idée de mettre un carroussel
+                    <div class="project-img">
+                        <img src="assets/img/portfolio-2.jpg" class="img-res" alt="">
+                    </div>
+                    <div class="project-img">
+                        <img src="assets/img/portfolio-3.jpg" class="img-res" alt="">
+                    </div>-->
+
+                </div>
+                <aside class="col-md-4">
+                    <div class="project-info">
+                        <h5>Description</h5>
+
+                        <p class="project-description">{{furniture.description}}</p>
+
+                        <div class="project-date-category">
+                            <p><span>Date:</span> {{furniture.date}}</p>
+                            <p><span>Attributs:</span> {{furniture.category}}, {{furniture.caracteristic}}{%if furniture.keywords%}, {{furniture.keywords}}{%endif%}</p>
+                            {% if furniture.for_sale %}
+                            <p><span>Prix:</span> {{furniture.price}} &euro;</p>
+                            {% endif %}
+                        </div><!-- /.project-cat -->
+                        
+                        <div class="social-links">
+                            <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="facebook-bg" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+                            <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                        
+                    </div><!-- /.project-description -->
+                </aside>
+            </div>
+        </div>
+        
+    </section><!-- /.section-project -->
+    <!-- les projets relié -->
+    <section class="site-section subpage-site-section section-related-projects">
+        <div class="container">
+            <div class="text-left">
+                <h2>Meubles similaires :</h2>
+            </div>
+            <div class="row">
+                {% for related_furniture in related_furnitures %}
+                         
+                
+                    <div class="col-lg-3 col-md-4 col-xs-6" data-groups='["{{furniture.caracteristic}}"]'>
+                        <div class="portfolio-item">
+                            <img src="{{ related_furniture.image.url}}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">{{ related_furniture.title }}</h4>
+                            <a href="{% url 'portfolio_item' related_furniture.id %}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div><!-- /.portfolio-item -->
+                    </div>
+
+
+                {%empty%}
+                Ce meuble est unique en son genre...
+                {% endfor %}
+            </div>
+        </div>
+    </section><!-- /.section-portfolio -->
+
+</main><!-- /#main -->
+
+{% endblock %}
