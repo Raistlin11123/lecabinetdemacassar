@@ -19,7 +19,7 @@ class Contact(models.Model):
 class Furniture(models.Model):
 	title = models.CharField(max_length=35, verbose_name='titre (30 caractère max')
 	image =  models.ImageField(null=True, blank=True, verbose_name='image_liste (plutot carré)')
-	alt = models.CharField(max_length=255, verbose_name="texte alternatif à l'image", blank=True)
+	alt = models.CharField(max_length=255, verbose_name="texte alternatif à l'image", default="None")
 	description = models.TextField(verbose_name = 'description', null=True, blank=True)
 	date = models.DateTimeField(blank=True)
 	keywords = models.CharField(null=True, max_length=255, verbose_name='mots clé à afficher en plus de catgorie et caractérisitique', blank=True)
