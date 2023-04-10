@@ -24,7 +24,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name='index'),
-    
+    path('politique_de_confidentialite/', views.politique_de_confidentialite, name='politique_de_confidentialite'),
+    path('mentions_legales/', views.mentions_legales, name='mentions_legales'),
     #Chemin vers l'administration
     path('admin/', admin.site.urls),
     #include vers mainapp
