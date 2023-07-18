@@ -62,9 +62,10 @@ $(function () {
     init = function() {
 
       // None of these need to be executed synchronously
+      setupFilters();
       setTimeout(function() {
         listen();
-        setupFilters();
+        
       }, 100);
 
       $("#grid .col-md-4").slice(0, 4).show();
