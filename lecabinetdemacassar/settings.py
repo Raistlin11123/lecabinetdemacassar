@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '3d7bc24cbcba5262a9f755215cb1778ae9a6d89c85924af6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','lecabinetdemacassar.herokuapp.com', 'cabinetdemacassar.herokuapp.com', "web-production-57c1.up.railway.app", "cabinet-macassar.fr", "www.cabinetdemacassar.fr"]
 
@@ -55,7 +55,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'lecabinetdemacassar.urls'
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-57c1.up.railway.app','https://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-57c1.up.railway.app','https://127.0.0.1', 'https://www.cabinetdemacassar.fr/']
 
 
 TEMPLATES = [
