@@ -27,7 +27,7 @@
     <!-- Favicon
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.PNG' %}">
-    <link rel="icon" type="image/PNG" sizes="16x16" href="{% static 'img/favicon.PNG' %}">
+    <link rel="icon" type="image/PNG" sizes="16x16" href="{% static 'img/favicon.ico' %}">
 
     <!-- Stylesheets
     ================================================== -->
@@ -55,7 +55,9 @@
 
                 <div class="navbar-header">
                    
-                    <a class="site-title"><span>Cab</span>Mac</a>
+                    <a class="site-title" href="{% url 'index' %}"><img style="margin:-30px 0" src="{% static 'img/logo1.png' %}" alt="Image" height="55" width="55">&nbsp;&nbsp;<span>Cab</span>Mac</a>
+
+
 
                 </div><!-- /.navbar-header -->
 
