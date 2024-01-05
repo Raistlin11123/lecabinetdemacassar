@@ -35,7 +35,7 @@ def contact_view(request):
                 form.cleaned_data["subject"],
                 form.cleaned_data["content"]  + "\n" + "\n" + form.cleaned_data["email"],#on saute une ligne entre l'email et le message
                 "",#ici c'est l'email de celui qui donne mais c'est toujours moi cf settings (logique on peut pas envoyer de qq d'autre sans son mdp)
-                ['philippepavec@gmail.com'],
+                ['clemencepavec@gmail.com'],
                 fail_silently=False,
             )
             return redirect('index')#avec un message de succès
