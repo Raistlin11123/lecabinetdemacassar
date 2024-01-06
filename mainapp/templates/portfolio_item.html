@@ -11,7 +11,7 @@
             {%endfor%}
             </h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Acceuil</a></li>
+              <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
               <li class="breadcrumb-item"><a href="portfolio.html">Portfolio</a></li>
               <li class="breadcrumb-item active">{{ furniture.title }}</li>
             </ol>
@@ -49,8 +49,7 @@
                         <p class="project-description">{{furniture.description}}</p>
 
                         <div class="project-date-category">
-                            <p><span>Date:</span> {{furniture.date}}</p>
-                            <p><span>Attributs:</span> {{furniture.category}}, {{furniture.caracteristic}}{%if furniture.keywords%}, {{furniture.keywords}}{%endif%}</p>
+                            {%if furniture.keywords%}<p><span>Attributs:</span> {{furniture.keywords}}{%endif%}</p>
                             {% if furniture.for_sale %}
                             <p><span>Prix:</span> {{furniture.price}} &euro;</p>
                             {% endif %}
