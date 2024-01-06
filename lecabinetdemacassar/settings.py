@@ -28,7 +28,7 @@ SECRET_KEY = '3d7bc24cbcba5262a9f755215cb1778ae9a6d89c85924af6'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','lecabinetdemacassar.herokuapp.com', 'cabinetdemacassar.herokuapp.com', "web-production-57c1.up.railway.app", "cabinet-macassar.fr", "www.cabinetdemacassar.fr"]
+ALLOWED_HOSTS = ['127.0.0.1','lecabinetdemacassar.herokuapp.com', 'cabinetdemacassar.herokuapp.com', "web-production-57c1.up.railway.app", "cabinet-macassar.fr", "www.cabinetdemacassar.fr", "https://www.cabinetdemacassar.fr/"]
 
 
 # Application definition
