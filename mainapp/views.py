@@ -70,3 +70,4 @@ def portfolio_item_view(request, id_furniture):
             titre.append((furniture.title[i].upper(), 'white'))
 
     return render(request,'portfolio_item.html',{'titre':titre,'furniture':furniture,  "related_furnitures":related_furnitures, "photos":photos})
+
