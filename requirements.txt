@@ -7,4 +7,4 @@ whitenoise==6.2.0
 Pillow
 google-cloud-storage
 django-storages
-google-auth-2.26.1
+google-auth==2.26.1
