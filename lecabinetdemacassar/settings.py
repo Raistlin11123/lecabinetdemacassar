@@ -179,3 +179,8 @@ DATABASES = {
 
 ##
 
+# Utiliser le backend de stockage Google Cloud Storage pour les fichiers statiques et media
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'bucket_image_cabmac'
+GS_PROJECT_ID = 'totemic-veld-410615'
+GS_CREDENTIALS = 'totemic-veld-410615-685026c4d22b.json'
