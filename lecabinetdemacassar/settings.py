@@ -128,10 +128,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-
-MEDIA_URL = '/media/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+from google.oauth2 import service_account
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(os.path.join(BASE_DIR, 'credential.json'))
+DEFAULT_FILE_STORAGE="lecabinetdemacassar.gcloud.GoogleCloudMediaFileStorage"
+GS_PROJECT_ID = 'totemic-veld-410615'
+GS_BUCKET_NAME = 'bucket_image_cabmac'
+MEDIA_ROOT = "media/"
+UPLOAD_ROOT = 'media/uploads/'
+MEDIA_URL = 'https://storage.googleapis.com/{}/'.format(GS_BUCKET_NAME)
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
@@ -178,9 +182,3 @@ DATABASES = {
 }
 
 ##
-
-# Utiliser le backend de stockage Google Cloud Storage pour les fichiers statiques et media
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-GS_BUCKET_NAME = 'bucket_image_cabmac'
-GS_PROJECT_ID = 'totemic-veld-410615'
-GS_CREDENTIALS = 'totemic-veld-410615-685026c4d22b.json'
