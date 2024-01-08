@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'lecabinetdemacassar.urls'
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-57c1.up.railway.app','https://127.0.0.1', 'https://www.cabinetdemacassar.fr/']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-57c1.up.railway.app','https://127.0.0.1', 'https://www.cabinetdemacassar.fr/', 'https://www.cabinetdemacassar.fr']
 
 
 TEMPLATES = [
