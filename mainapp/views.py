@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_protect
 
 from mainapp.models import Furniture, FurnitureImage
 #app
@@ -23,6 +24,7 @@ def portfolio_restauration_view(request):
     furnitures = Furniture.objects.filter(category = "restauration")
     return render(request, 'portfolio_restauration.html', {'furnitures':furnitures})
 
+@csrf_protect
 def contact_view(request):
     #Formulaire pour un nouvel indice
     if request.method == "POST":
