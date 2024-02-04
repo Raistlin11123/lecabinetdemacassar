@@ -2,7 +2,8 @@ from django.shortcuts import render
 from mainapp.models import Furniture
 #simple function which return the index page
 def index(request):
-	furnitures = Furniture.objects.order_by('date').all()[:4]
+	furnitures = Furniture.objects.all()
+	furnitures = furnitures[len(furnitures)-4:len(furnitures)]
 	return render(request, 'index.html', {'furnitures':furnitures})
 
 def politique_de_confidentialite(request):
