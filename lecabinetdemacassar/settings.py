@@ -129,8 +129,12 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 from google.oauth2 import service_account
-GS_CREDENTIALS = service_account.Credentials.from_service_account_file(os.path.join(BASE_DIR, 'credential.json'))
-DEFAULT_FILE_STORAGE="lecabinetdemacassar.gcloud.GoogleCloudMediaFileStorage"
+import json
+credentials_info = json.loads(os.environ["GOOGLE_CREDENTIALS_JSON"])
+GS_CREDENTIALS = service_account.Credentials.from_service_account_info(
+    credentials_info
+)
+DEFAULT_FILE_STORAGE="storages.backends.gcloud.GoogleCloudStorage"
 GS_PROJECT_ID = 'totemic-veld-410615'
 GS_BUCKET_NAME = 'bucket_image_cabmac'
 MEDIA_ROOT = "media/"
